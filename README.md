@@ -8,12 +8,11 @@ This PowerShell script allows you to perform file integrity monitoring on a targ
 - Create a new baseline of file hashes.
 - Monitor file integrity based on an existing baseline.
 - Detect changes and deletions in monitored files.
-- User-friendly menu for easy operation.
 
 ## Prerequisites
 
 - PowerShell ISE for executing the script.
-- Windows OS (Tested on Windows 10).
+- Windows OS (Tested on Windows 11).
 
 ## Usage
 
@@ -23,7 +22,7 @@ This PowerShell script allows you to perform file integrity monitoring on a targ
 
 3. Navigate to the repository directory.
 
-4. Execute the script by running the `File-Integrity-Monitoring.ps1` file.
+4. Execute the script by running the `fim.ps1` file.
 
 5. Follow the on-screen instructions:
    - Choose to create a new baseline (Option 'A') or use an existing baseline (Option 'B').
@@ -31,10 +30,16 @@ This PowerShell script allows you to perform file integrity monitoring on a targ
 6. For Option 'A':
    - The script will calculate file hashes for all files in the 'Files' directory.
    - The baseline will be stored in 'baseline.txt'.
+  
+     <p align="center">
+<img src="https://i.imgur.com/5tLfVEH.png" height="80%" width="80%" alt="baseline"/>
+</p>
+
+_baseline file_
 
 7. For Option 'B':
    - The script will load the baseline from 'baseline.txt'.
-   - It will continuously monitor file integrity and display notifications for changes or deletions.
+   - It will continuously monitor file integrity and display notifications for changes to the file, the addition of a file or deletions.
 
 8. To stop monitoring, press `Ctrl+C` in the PowerShell console.
 
@@ -48,4 +53,8 @@ This PowerShell script allows you to perform file integrity monitoring on a targ
 
 - When choosing Option 'A', the script deletes an existing 'baseline.txt' file to avoid overwriting.
 
+<p align="center">
+<img src="https://i.imgur.com/VWMcGPp.png" height="80%" width="80%" alt="baseline"/>
+</p>
 
+*Script is running showing changes that have been made to the files*
